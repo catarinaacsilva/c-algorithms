@@ -1,0 +1,38 @@
+gcc -c nomeFicheiro.c  ---> gcc -c time.c
+
+obtem se um ficheiro time.o
+
+gcc -Wall struct.c time.o
+
+
+time.o --> ficheiro para time.c --> que é privado
+o ficheiro .o depende do ficheiro source.c mas nem todos tem um .h
+Quando temos .h nas makefiles tem que se dizer que houver alteração
+
+se nao for definida no ficheiro .h nao é conhecido
+
+
+
+include com < > tem que ir ao ficheiro c e procurar
+include com " " vai ao diretorio procurar
+
+normalmente temos a interface e a implementação no mesmo diretorio
+
+
+uma string tem que ter uma terminação se nao vai ate encontrar o primeiro 0 na memoria
+\0 --> caracter para terminação
+
+sprintf(str, "%d...", ...) --> para strings
+
+...de...mes...de...ano\0
+
+temos uma string e queremos tirar valores --> split
+strtok numa operação recirsiva ate devolver o ponteiro null
+
+"10-12-2014"
+10 \0 12 \0 2014 \0
+
+tendo a string "10"
+sscanf(str, "$d", &dia)
+se devolver 0 --> não é convertivel para decimal
+se devolver 1 --> convertivel para decimal(inteiro)
